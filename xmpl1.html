@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
     <head>
     </head>
@@ -31,5 +32,74 @@
                 </fieldset>
             </form>
         </div>
-    </body>
+
+        <!-- algunos conceptos sobre el DOM de javascript !-->
+            <!-- 
+                el dom es una de las inovaciones que mas  ha influido en la creacion de paginas web dinamicas y en aplicaciones mucho mas complejas, el dom es usado para acceder a los elementos xhtml como si de xml se tratara 
+                esta disponible para lenguajes como 
+                     java, php y javascript 
+
+                el principal uso de dom es el manipular xhtml y otros elementos de una pagina web, la pagina xhtml se carga automaticamente en el navegador 
+
+                                        document 
+                            head                       element 
+                    elemento      elemento               BODY
+                      META          TITLE               TEXTO   ELEMENTO
+                                 texto pagina                    TEXTO STRONG 
+                                   sencilla          
+
+                la especificacion dom contiene 12 nodos, normalmente se usan solo 4 o 5 
+
+                * document : nodo raiz del que derivan todos los demas, y qe es unico 
+                * element : representa a la etiquetas html y es el unico nodo del qe pueden derivar los demas nodos, ademas de ser el unico que puede contener propiedades 
+                *attr : nodo que representa las propiedades de cada etiqueta html
+                uno por cada atributo atributo = valor 
+                * texto : nodo que contiene texto dentro de una etiqeta html 
+                * comment : representa comentarios de la pagina  html 
+
+                se puede acceder a lo nodos mediant los metodos :
+                    * getelementByname
+                    * getelementByTagName
+                    * getelementBtName
+                    ....
+
+                los elementos tambien pueden ser agragados a la pagina web mediante nodos 
+                mediante los metodos 
+                *createElement
+                *createTextnNode
+                *appendchild
+
+        ejemplos:
+            !--> 
+        <br>
+        <br><br><br><br><br><br>
+        <div>
+            <input type="button" value="boton crear parrado" id ='hol' onclick="crearParrafo();"/>
+            <input type ="button" value="elimina nodo"  onclick="eliminr();"
+            <!-- crear parrafo -->
+            <script type="text/javascript">
+                function crearParrafo ()
+                {
+                // crear un parrafo a base del dom
+                var nuevoElementoParrafo = document.createElement("p");
+                    nuevoElementoParrafo.nodeName ='parraf'
+                
+                   
+                var nodoTexto = document.createTextNode(
+                    "este el texto que se que se mostrara en la ventana del navegador");
+                nuevoElementoParrafo.appendChild( nodoTexto );
+                document.body.appendChild(nuevoElementoParrafo)
+                
+                }
+                
+                function eliminr()
+                {
+                    var parrafo = document.getElementsByName('parraf');
+                    alert(parrafo[0].nodeName)
+                   parrafo[0].parentNode.removeChild(parrafo[0])
+                }
+                
+              
+            </script>
+        </div>
 </html>
