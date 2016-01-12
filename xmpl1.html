@@ -76,13 +76,13 @@
         <div>
             <input type="button" value="boton crear parrado" id ='hol' onclick="crearParrafo();"/>
             <input type ="button" value="elimina nodo"  onclick="eliminr();"
-            <!-- crear parrafo -->
+            <!-- crear parrafo!-->
             <script type="text/javascript">
                 function crearParrafo ()
                 {
                 // crear un parrafo a base del dom
                 var nuevoElementoParrafo = document.createElement("p");
-                    nuevoElementoParrafo.nodeName ='parraf'
+                   docu nuevoElementoParrafo.nodeName ='parraf'
                 
                    
                 var nodoTexto = document.createTextNode(
@@ -90,16 +90,30 @@
                 nuevoElementoParrafo.appendChild( nodoTexto );
                 document.body.appendChild(nuevoElementoParrafo)
                 
+                
                 }
                 
                 function eliminr()
                 {
-                    var parrafo = document.getElementsByName('parraf');
-                    alert(parrafo[0].nodeName)
-                   parrafo[0].parentNode.removeChild(parrafo[0])
+                  
+                    
+                     // accediendo a las propiedades html
+                var boton = document.getElementById('hol')
+                alert(boton.value)
+                alert(boton.style.
+                    
+                    
+                   
                 }
+                
+                
                 
               
             </script>
+            
+            <!-- el siguiente paso es el accesamiento a cada una de las propiedades de un elemento asi como a sus atributos css, dom permite hacer esto de una manera muy sencilla, una vez que se ha conseguid el elemento se puede acceder de manera directa a su propiedad, sindo a veces especifica para cada tipo de etiqueta, para acceder a una propiedad css se debe utiliza la etiqueta "style" y posteriormente acceder a su valor!-->
+            
+            
         </div>
+        
 </html>

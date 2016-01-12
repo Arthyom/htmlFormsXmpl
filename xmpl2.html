@@ -1,0 +1,28 @@
+<html>
+<head></head>
+<body>
+    <a id = 'hola' href="xmpl1.html"> ir a la pagina 1</a>
+    <input type="button" id='add' value="cambiar enlace" onclick=" stilos()"/>
+    <input type="text" id='entrada' />
+    <script type="text/javascript">
+        function texto(){
+            var enlace = document.getElementById('hola')
+            alert(enlace.href)
+            enlace.href = 'https://www.google.com'
+            alert('nuevo enlace'+enlace.href)
+        }
+        
+        /// cambiar estilos
+        function stilos (){
+            var estilo = document.getElementById('hola')
+            estilo.style.color = '9999'
+            estilo.style.fontSize = 20
+            estilo.style.fontFamily = 'TimesNewRoman'
+            estilo.style.fontFamily ='arialBlack'
+            estilo.style.textAlign = 'center'
+        }
+    
+    </script>
+
+</body>
+</html>
